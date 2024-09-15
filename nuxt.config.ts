@@ -9,11 +9,14 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'nuxt-auth-utils',
     "@pinia/nuxt",
+    '@nuxt/image'
   ],
   hub: {
     database: true,
   },
   runtimeConfig: {
+    appleOtp: '',
+    appleId: '',
     public: {
       helloText: 'Hello from the Edge 👋'
     }
