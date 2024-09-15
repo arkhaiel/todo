@@ -1,49 +1,7 @@
 <template>
-  <UDashboardLayout>
-    <UDashboardPanel
-      id="layout"
-      :width="250"
-      :resizable="{ min: 200, max: 300 }"
-      collapsible
-    >
-      <UDashboardNavbar>
-        <template #left>
-          <UDropdown :items="matieres" :popper="{ placement: 'bottom-start' }">
-            <UButton
-              label="Navigation"
-              trailing-icon="heroicons:chevron-down-20-solid"
-              variant="solid"
-              color="gray"
-            />
-          </UDropdown>
-        </template>
-        <template #right>
-          <UColorModeButton />
-        </template>
-      </UDashboardNavbar>
-      <UDashboardSidebar>
-        <template #header>
-          <UContentSearchButton label="Recherche..." />
-        </template>
-        <UDashboardSidebarLinks :links="links" />
-        <template #footer>
-          <UserDropdown />
-        </template>
-      </UDashboardSidebar>
-    </UDashboardPanel>
-    <UDashboardPanel grow>
-      <UDashboardNavbar>
-        <template #left>
-          breadcrumb
-        </template>
-      </UDashboardNavbar>
-      <UDashboardPanelContent
-        class="px-4 prose prose-primary dark:prose-invert max-w-none first:prose-h2:mt-0"
-      >
-        <slot />
-      </UDashboardPanelContent>
-    </UDashboardPanel>
-  </UDashboardLayout>
+  <div>
+    <slot />
+  </div>
 </template>
 
 <script lang="ts" setup>
